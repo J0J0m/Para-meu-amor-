@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards do Amor</title>
+    <!-- Incluindo o Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilo para a animação de virar o cartão */
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Para navegadores baseados em WebKit */
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-100 to-purple-200 flex flex-col items-center justify-center min-h-screen font-sans p-6">
+    <main class="w-full max-w-6xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-center text-pink-700 mb-8 mt-4">
+            20 Motivos para te Amar
+        </h1>
+        <p class="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
+            Passe o mouse sobre os cartões para descobrir os motivos.
+        </p>
+        <section id="container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- Flashcard 1 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 1</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Porque o seu sorriso ilumina meu dia.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 2 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 2</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Porque você me faz rir sem motivo.</p>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Flashcard 3 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 3</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Pela sua bondade e empatia com os outros.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 4 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 4</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Porque você me apoia em todas as minhas loucuras.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 5 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 5</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Pela sua honestidade e sinceridade.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 6 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 6</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Porque me sinto seguro(a) ao seu lado.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 7 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 7</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Porque você me entende sem que eu precise falar.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 8 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 8</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Pela sua inteligência e senso de humor.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 9 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 9</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Porque você me inspira a ser uma pessoa melhor.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 10 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 10</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Pela sua paixão e entusiasmo pela vida.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 11 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 11</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Porque cada momento ao seu lado é especial.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 12 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 12</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Porque você me completa.</p>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Flashcard 13 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 13</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Pela sua presença que acalma minha alma.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 14 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 14</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Porque o mundo é mais bonito com você nele.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 15 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 15</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Pela sua força e determinação.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 16 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 16</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Pelo jeito que você me olha.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 17 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 17</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Porque você sempre encontra o lado bom das coisas.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 18 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 18</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Porque você me ensina algo novo todos os dias.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 19 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 19</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Pela sua voz, que é a minha música favorita.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Flashcard 20 -->
+            <article class="card bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105 cursor-pointer h-60">
+                <div class="card-inner">
+                    <div class="card-front bg-white">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Motivo 20</h3>
+                        <p class="text-lg font-semibold text-gray-800">Por que eu te amo?</p>
+                    </div>
+                    <div class="card-back bg-pink-500 text-white">
+                        <p class="text-lg font-medium">Porque você é simplesmente você.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="p-6 text-center text-gray-600 mt-12 w-full">
+        <p>Criado com carinho, só para você.</p>
+    </footer>
+</body>
+</html>
+eu te amo muito
